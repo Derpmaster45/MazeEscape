@@ -9,15 +9,19 @@ namespace MazeEscape
             //double damage = 0;
             if (Weapon == WeaponsEnum.BOW) 
             {
-                damage = 25;
+                damage = 35;
             }
             else if (Weapon == WeaponsEnum.SHORTSWORD)
             {
-                damage = 20;
+                damage = 40;
             }
-            else if (Weapon == WeaponsEnum.Spear)
+            else if (Weapon == WeaponsEnum.SPEAR)
             {
-                damage = 50;
+                damage = 45;
+            }
+            else if (Weapon == WeaponsEnum.FISTS)
+            {
+                damage = 10;
             }
 
             return damage;
