@@ -37,6 +37,7 @@
     <Compile Include="Enums\WeaponsEnum.cs" />
     <Compile Include="Classes\WeaponSTATS.cs" />
     <Compile Include="Enums\EnemyTypes.cs" />
+    <Compile Include="Classes\Enemy.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Enums\" />
