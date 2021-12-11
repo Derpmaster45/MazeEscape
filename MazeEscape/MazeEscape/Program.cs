@@ -6,6 +6,7 @@ namespace MazeEscape
     {
         public static void Main(string[] args)
         {
+            WeaponsEnum weaponOfChoice;
             // intro and first choice
             Console.WriteLine("You wake up, and you don't know where you are. There are 4 pathways. You can:\n" +
             	"Go North\n" +
@@ -24,21 +25,31 @@ namespace MazeEscape
                     string actionChoice = Console.ReadLine();
                     switch (actionChoice)
                     {
-                        case "YES": 
+                        case "YES":
                         case "yes":
                         case "y":
                         case "Y":
                         case "Pick up short sword":
                         case "pick up short sword":
-                            Console.WriteLine("");
+                            weaponOfChoice = WeaponsEnum.SHORTSWORD;
+                            Console.WriteLine($"You picked up the {weaponOfChoice}.\n You have no idea why it is here, but in just in case, you take it with you.");
                             break;
+
                         default:
                             Console.WriteLine("Command not recognized");
+                            break;
 
                     }
                     break;
+                    // case for heading south
+                case "Go south":
+                case "Go South:":
+                case "go south":
+                    Console.WriteLine("You head down the path that leads south.\n On that path you find a slingshot do you pick it up?");
+                    break;
                 default:
-                    Console.WriteLine("There are 4 pathways. You can:\n\" +\n            \t\"Go North\n\" +\n            \t\"Go South\n\" +\n            \t\"Go East\n\" +\n            \t\"Go West\");");
+                    Console.WriteLine("There are 4 pathways. You can:\n\" +\n            \t\"Go North\n\" +\n            \t\"Go South\n\" +\n            \t\"Go East\n\" +\n          " +
+                    	"\t\"Go West\"");
                     break;
             }
         }
