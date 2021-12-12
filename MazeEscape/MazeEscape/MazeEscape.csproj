@@ -40,6 +40,7 @@
     <Compile Include="Classes\Enemy.cs" />
     <Compile Include="Classes\BattleSystem.cs" />
     <Compile Include="ExperimentalClasses\BattleSystem.cs" />
+    <Compile Include="ExperimentalClasses\PlayerStats.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Enums\" />

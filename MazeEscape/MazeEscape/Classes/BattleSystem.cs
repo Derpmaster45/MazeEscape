@@ -5,6 +5,8 @@ namespace MazeEscape.Classes
     {
         public BattleSystem()
         {
+            Enemy target = new Enemy();
+
         }
     }
 }
