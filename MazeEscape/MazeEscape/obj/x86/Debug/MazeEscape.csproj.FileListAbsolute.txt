@@ -3,3 +3,4 @@
 /home/jordan/Projects/MazeEscape/MazeEscape/bin/Debug/MazeEscape.pdb
 /home/jordan/Projects/MazeEscape/MazeEscape/obj/x86/Debug/MazeEscape.exe
 /home/jordan/Projects/MazeEscape/MazeEscape/obj/x86/Debug/MazeEscape.pdb
+/home/jordan/Projects/MazeEscape/MazeEscape/obj/x86/Debug/MazeEscape.csprojAssemblyReference.cache

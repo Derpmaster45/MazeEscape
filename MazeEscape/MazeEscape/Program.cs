@@ -45,7 +45,7 @@ namespace MazeEscape
                             weaponOfChoice = WeaponsEnum.SHORTSWORD;
                             Console.WriteLine($"You picked up the {weaponOfChoice}.\n You have no idea why it is here, but in just in case, you take it with you.");
                             weaponDamage=stats.setDamage(weaponOfChoice);
-                            Console.WriteLine($"The damage for {weaponOfChoice} is {weaponDamage}");
+                            //Console.WriteLine($"The damage for {weaponOfChoice} is {weaponDamage}");
                             break;
                         case "NO":
                         case "no":
