@@ -4,6 +4,7 @@ namespace MazeEscape
     public class WeaponSTATS
     {
         public double damage { get; set; }
+        //setters
         public virtual double setDamage(WeaponsEnum Weapon)
         {
             //double damage = 0;

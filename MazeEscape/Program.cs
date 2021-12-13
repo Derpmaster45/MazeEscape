@@ -39,6 +39,13 @@ namespace MazeEscape
                             weaponDamage=stats.setDamage(weaponOfChoice);
                             Console.WriteLine($"The damage for {weaponOfChoice} is {weaponDamage}");
                             break;
+                        case "NO":
+                        case "no":
+                        case "N":
+                        case "n":
+                        case "Leave short sword alone":
+                        case "LEAVE SHORT SWORD ALONE":
+                        case "leave short sword alone":
 
                         default:
                             Console.WriteLine("Command not recognized");
