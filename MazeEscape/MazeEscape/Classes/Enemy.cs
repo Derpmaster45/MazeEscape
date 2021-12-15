@@ -54,6 +54,21 @@ namespace MazeEscape.Classes
         public double setDefensePoints(EnemyTypes type)
         {
             // switch statement goes here
+            switch (type)
+            {
+                case EnemyTypes.BAT:
+                    defensePoints = 20;
+                    break;
+                case EnemyTypes.CAVECRAWLER:
+                    defensePoints = 40;
+                    break;
+                case EnemyTypes.HORNET:
+                    defensePoints = 35;
+                    break;
+                case EnemyTypes.ZOMBIE:
+                    defensePoints = 15;
+                    break;
+            }
 
             return defensePoints;
         }
@@ -63,16 +78,19 @@ namespace MazeEscape.Classes
             switch (type)
             {
                 case EnemyTypes.BAT:
+                    health = 150;
                     break;
                 case EnemyTypes.CAVECRAWLER:
+                    health = 250;
                     break;
                 case EnemyTypes.HORNET:
+                   health= 200;
                     break;
                 case EnemyTypes.ZOMBIE:
+                    health = 100;
                     break;
             }
             return health;
         }
     }
 }
-
