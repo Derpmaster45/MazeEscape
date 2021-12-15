@@ -38,7 +38,6 @@
     <Compile Include="Classes\WeaponSTATS.cs" />
     <Compile Include="Enums\EnemyTypes.cs" />
     <Compile Include="Classes\Enemy.cs" />
-    <Compile Include="Classes\BattleSystem.cs" />
     <Compile Include="ExperimentalClasses\BattleSystem.cs" />
     <Compile Include="ExperimentalClasses\PlayerStats.cs" />
   </ItemGroup>

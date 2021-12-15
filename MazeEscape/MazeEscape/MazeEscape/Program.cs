@@ -1,4 +1,7 @@
 ﻿using System;
+using MazeEscape.Classes;
+using MazeEscape.Enums;
+using MazeEscape.ExperimentalClasses;
 
 namespace MazeEscape
 {
@@ -9,7 +12,12 @@ namespace MazeEscape
             // object instance creation
             WeaponsEnum weaponOfChoice= new WeaponsEnum();
             WeaponSTATS stats = new WeaponSTATS();
+            //PlayerStats pStats =();
+
+            // stats setup
+           // pStats.setHealth = 100;
             double weaponDamage;
+
             // intro and first choice
             Console.WriteLine("You wake up, and you don't know where you are. There are 4 pathways. You can:\n" +
             	"Go North\n" +
@@ -37,7 +45,7 @@ namespace MazeEscape
                             weaponOfChoice = WeaponsEnum.SHORTSWORD;
                             Console.WriteLine($"You picked up the {weaponOfChoice}.\n You have no idea why it is here, but in just in case, you take it with you.");
                             weaponDamage=stats.setDamage(weaponOfChoice);
-                            Console.WriteLine($"The damage for {weaponOfChoice} is {weaponDamage}");
+                            //Console.WriteLine($"The damage for {weaponOfChoice} is {weaponDamage}");
                             break;
                         case "NO":
                         case "no":
