@@ -7,5 +7,8 @@ namespace MazeEscape.ExperimentalClasses
         public double defense { get; set; }
         public double attack { get; set; }
         public int level { get; set; }
+        // getters and setters
+       
     }
-    }
+   
+}

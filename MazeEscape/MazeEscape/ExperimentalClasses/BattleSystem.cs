@@ -5,8 +5,18 @@ namespace MazeEscape.ExperimentalClasses
 {
     public class BattleSystem
     {
-        Enemy target = new Enemy();
+        // object declaration
+        public Enemy target = new Enemy();
+        PlayerStats player = new PlayerStats();
 
+        // battlesystem fuction
+        public void battleStart(EnemyTypes type)
+        {
+            while (target.health > 0)
+            {
 
+            }
+
+        }
     }
 }
