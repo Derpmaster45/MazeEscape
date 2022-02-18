@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "91e49a45-33f3-4c73-ba58-f5f894203ded": {
+      "ProjectGuid": "91e49a45-33f3-4c73-ba58-f5f894203ded",
+      "DisplayName": "MazeEscape",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
+}
