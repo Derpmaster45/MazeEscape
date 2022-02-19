@@ -3,3 +3,9 @@
 /home/jordan/Projects/MazeEscape/MazeEscape/obj/x86/Debug/MazeEscape.csproj.CoreCompileInputs.cache
 /home/jordan/Projects/MazeEscape/MazeEscape/obj/x86/Debug/MazeEscape.exe
 /home/jordan/Projects/MazeEscape/MazeEscape/obj/x86/Debug/MazeEscape.pdb
+/home/jordan/Documents/Maze_Escape/MazeEscape-main/MazeEscape/MazeEscape/MazeEscape/obj/x86/Debug/MazeEscape.csprojAssemblyReference.cache
+/home/jordan/Documents/Maze_Escape/MazeEscape-main/MazeEscape/MazeEscape/MazeEscape/obj/x86/Debug/MazeEscape.csproj.CoreCompileInputs.cache
+/home/jordan/Documents/Maze_Escape/MazeEscape-main/MazeEscape/MazeEscape/MazeEscape/obj/x86/Debug/MazeEscape.exe
+/home/jordan/Documents/Maze_Escape/MazeEscape-main/MazeEscape/MazeEscape/MazeEscape/obj/x86/Debug/MazeEscape.pdb
+/home/jordan/Documents/Maze_Escape/MazeEscape-main/MazeEscape/MazeEscape/MazeEscape/bin/Debug/MazeEscape.exe
+/home/jordan/Documents/Maze_Escape/MazeEscape-main/MazeEscape/MazeEscape/MazeEscape/bin/Debug/MazeEscape.pdb

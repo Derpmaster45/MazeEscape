@@ -8,6 +8,7 @@ namespace MazeEscape.ExperimentalClasses
         // object declaration
         public Enemy target = new Enemy();
         PlayerStats player = new PlayerStats();
+        private WeaponsEnum weapons { get; set; }
 
         // battlesystem fuction
         public void battleStart(EnemyTypes type)
@@ -24,7 +25,6 @@ namespace MazeEscape.ExperimentalClasses
                 switch (action)
                 {
                     case 1:
-                        // insert action code here
                         break;
                     case 2:
                         // insert action code here
