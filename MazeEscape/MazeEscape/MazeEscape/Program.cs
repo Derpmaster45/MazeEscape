@@ -13,10 +13,13 @@ namespace MazeEscape
             WeaponsEnum weaponOfChoice= new WeaponsEnum();
             WeaponSTATS stats = new WeaponSTATS();
             
-            //PlayerStats pStats =();
+            PlayerStats pStats =();
 
             // stats setup
-            // pStats.setHealth = 100;
+            pStats.health = 100;
+            pStats.defense = 10;
+            pStats.speed = 3;
+            pStats.level = 1;
             double weaponDamage;
 
             // intro and first choice
