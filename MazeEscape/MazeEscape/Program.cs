@@ -12,6 +12,10 @@ namespace MazeEscape
             // object instance creation
             WeaponsEnum weaponOfChoice= new WeaponsEnum();
             WeaponSTATS stats = new WeaponSTATS();
+            bool wentNorth = false;
+            bool wentSouth = false;
+            bool wentEast = false;
+            bool wentWest=false;
             //PlayerStats pStats =();
 
             // stats setup
@@ -32,6 +36,7 @@ namespace MazeEscape
                 case "Go North":
                 case "go north":
                 case "GO NORTH":
+                    wentNorth=true;
                     Console.WriteLine("You head down the path heading north, on the path you find a short sword. Do you want to pick it up?");
                     string actionChoice = Console.ReadLine();
                     switch (actionChoice)
@@ -65,7 +70,17 @@ namespace MazeEscape
                 case "Go south":
                 case "Go South:":
                 case "go south":
-                    Console.WriteLine("You head down the path that leads south.\n On that path you find a slingshot do you pick it up?");
+                    wentSouth=true;
+                    Console.WriteLine("You head down the path that leads south.\n On that path you find a bow do you pick it up?");
+                    switch (Console.ReadLine()) 
+                    {
+                    
+                    }
+                    break;
+                    // case for heading east
+                    case "Go East".ToLower():
+                    wentEast=true;
+                    Console.WriteLine("You headed down the path that leads east.");
                     break;
                 default:
                     Console.WriteLine("There are 4 pathways. You can:\n\" +\n            \t\"Go North\n\" +\n            \t\"Go South\n\" +\n            \t\"Go East\n\" +\n          " +
