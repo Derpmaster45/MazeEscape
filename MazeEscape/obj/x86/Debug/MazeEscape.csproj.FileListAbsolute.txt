@@ -9,3 +9,11 @@
 /home/jordan/Documents/Maze_Escape/MazeEscape-main/MazeEscape/MazeEscape/MazeEscape/obj/x86/Debug/MazeEscape.pdb
 /home/jordan/Documents/Maze_Escape/MazeEscape-main/MazeEscape/MazeEscape/MazeEscape/bin/Debug/MazeEscape.exe
 /home/jordan/Documents/Maze_Escape/MazeEscape-main/MazeEscape/MazeEscape/MazeEscape/bin/Debug/MazeEscape.pdb
+D:\C#\MazeEscape\MazeEscape\bin\Debug\MazeEscape.exe.config
+D:\C#\MazeEscape\MazeEscape\bin\Debug\MazeEscape.exe
+D:\C#\MazeEscape\MazeEscape\bin\Debug\MazeEscape.pdb
+D:\C#\MazeEscape\MazeEscape\obj\x86\Debug\MazeEscape.csproj.AssemblyReference.cache
+D:\C#\MazeEscape\MazeEscape\obj\x86\Debug\MazeEscape.csproj.SuggestedBindingRedirects.cache
+D:\C#\MazeEscape\MazeEscape\obj\x86\Debug\MazeEscape.csproj.CoreCompileInputs.cache
+D:\C#\MazeEscape\MazeEscape\obj\x86\Debug\MazeEscape.exe
+D:\C#\MazeEscape\MazeEscape\obj\x86\Debug\MazeEscape.pdb
