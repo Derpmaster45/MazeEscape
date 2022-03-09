@@ -79,8 +79,30 @@ namespace MazeEscape
                 {
                     Console.WriteLine("You come across a thicket it looks peaceful. What would you like to do?");
                     string actionChoice = Console.ReadLine();
-                    
-                 }
+                    if(actionChoice.ToLower()=="Cut it down") 
+                    {
+                        Console.WriteLine("You took a swing at the thicket.\n Do you want to continue cutting it down?");
+                        actionChoice = Console.ReadLine().ToLower();
+                        int i = 0;
+                        do
+                        {
+
+                            Console.WriteLine("You continue to cut down the thicket?\n Do you want to continue cutting it down");
+                            actionChoice = Console.ReadLine().ToLower();
+                            if (actionChoice.ToLower() == "Yes") 
+                            {
+                                i++;
+                            }
+                            else 
+                            {
+                                break;
+                             }
+
+                        } while (i < 5);                  
+                            
+                        }
+
+                }
             }
         }
         
