@@ -10,9 +10,9 @@ namespace MazeEscape
         public static void Main(string[] args)
         {
             // object instance creation
-            WeaponsEnum weaponOfChoice= new WeaponsEnum();
+            WeaponsEnum weaponOfChoice = new WeaponsEnum();
             WeaponSTATS stats = new WeaponSTATS();
-            
+
             //PlayerStats pStats =();
 
             // stats setup
@@ -21,10 +21,10 @@ namespace MazeEscape
 
             // intro and first choice
             Console.WriteLine("You wake up, and you don't know where you are. There are 4 pathways. You can:\n" +
-            	"Go North\n" +
-            	"Go South\n" +
-            	"Go East\n" +
-            	"Go West");
+                "Go North\n" +
+                "Go South\n" +
+                "Go East\n" +
+                "Go West");
             Console.WriteLine("What will you choose?");
             string option = Console.ReadLine();
             // use a switch statement to bulkify the statements
@@ -45,7 +45,7 @@ namespace MazeEscape
 
                             weaponOfChoice = WeaponsEnum.SHORTSWORD;
                             Console.WriteLine($"You picked up the {weaponOfChoice}.\n You have no idea why it is here, but in just in case, you take it with you.");
-                            weaponDamage=stats.setDamage(weaponOfChoice);
+                            weaponDamage = stats.setDamage(weaponOfChoice);
                             //Console.WriteLine($"The damage for {weaponOfChoice} is {weaponDamage}");
                             break;
                         case "NO":
@@ -55,6 +55,10 @@ namespace MazeEscape
                         case "Leave short sword alone":
                         case "LEAVE SHORT SWORD ALONE":
                         case "leave short sword alone":
+                            Console.WriteLine("You leave the short sword alone thinking that you may not need it.");
+                            weaponOfChoice = WeaponsEnum.FISTS;
+
+                            break;
 
                         default:
                             Console.WriteLine("Command not recognized");
@@ -62,7 +66,7 @@ namespace MazeEscape
 
                     }
                     break;
-                    // case for heading south
+                // case for heading south
                 case "Go south":
                 case "Go South:":
                 case "go south":
@@ -73,38 +77,32 @@ namespace MazeEscape
                     break;
 
             }
-            if(option.ToLower()=="go north") 
+            if (option.ToLower() == "go north")
             {
-                if (weaponOfChoice == WeaponsEnum.SHORTSWORD) 
+                if (weaponOfChoice == WeaponsEnum.SHORTSWORD)
                 {
                     Console.WriteLine("You come across a thicket it looks peaceful. What would you like to do?");
-                    string actionChoice = Console.ReadLine();
-                    if(actionChoice.ToLower()=="Cut it down") 
+                    string actionChoice = Console.ReadLine().ToLower();
+                    switch (actionChoice) 
                     {
-                        Console.WriteLine("You took a swing at the thicket.\n Do you want to continue cutting it down?");
-                        actionChoice = Console.ReadLine().ToLower();
-                        int i = 0;
-                        do
-                        {
+                        case "cut it down":
+                            int i = 0;
+                            do { Console.WriteLine($"You took a swing at the the Thicket with the {weaponOfChoice.ToString().ToLower()}");
 
-                            Console.WriteLine("You continue to cut down the thicket?\n Do you want to continue cutting it down");
-                            actionChoice = Console.ReadLine().ToLower();
-                            if (actionChoice.ToLower() == "Yes") 
-                            {
-                                i++;
+                                Console.WriteLine("Would you like to continue Y/n");
+                                string gameContinue= Console.ReadLine().ToLower();
+                                if (gameContinue.ToLower() == "yes")
+                                { 
+                                
+                                }
                             }
-                            else 
-                            {
-                                break;
-                             }
+                            while (i < 5);
+                            break;
 
-                        } while (i < 5);                  
-                            
-                        }
+                    }
 
                 }
             }
         }
-        
     }
 }
