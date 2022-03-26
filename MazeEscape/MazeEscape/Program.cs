@@ -12,17 +12,19 @@ namespace MazeEscape
             // object instance creation
             WeaponsEnum weaponOfChoice= new WeaponsEnum();
             WeaponSTATS stats = new WeaponSTATS();
-            
+            bool wentNorth = false;
+            bool wentSouth = false;
+            bool wentEast = false;
+            bool wentWest=false;
             //PlayerStats pStats =();
 
             // stats setup
-            // pStats.setHealth = 100;
+           // pStats.setHealth = 100;
             double weaponDamage;
 
             // intro and first choice
-            #region 
             Console.WriteLine("You wake up, and you don't know where you are. There are 4 pathways. You can:\n" +
-            "Go North\n" +
+            	"Go North\n" +
             	"Go South\n" +
             	"Go East\n" +
             	"Go West");
@@ -34,6 +36,7 @@ namespace MazeEscape
                 case "Go North":
                 case "go north":
                 case "GO NORTH":
+                    wentNorth=true;
                     Console.WriteLine("You head down the path heading north, on the path you find a short sword. Do you want to pick it up?");
                     string actionChoice = Console.ReadLine();
                     switch (actionChoice)
@@ -67,43 +70,23 @@ namespace MazeEscape
                 case "Go south":
                 case "Go South:":
                 case "go south":
-                    Console.WriteLine("You head down the path that leads south.\n On that path you find a slingshot do you pick it up?");
+                    wentSouth=true;
+                    Console.WriteLine("You head down the path that leads south.\n On that path you find a bow do you pick it up?");
+                    switch (Console.ReadLine()) 
+                    {
+                    
+                    }
+                    break;
+                    // case for heading east
+                    case "Go East".ToLower():
+                    wentEast=true;
+                    Console.WriteLine("You headed down the path that leads east.");
                     break;
                 default:
-                    Console.WriteLine("Command not recognised");
+                    Console.WriteLine("There are 4 pathways. You can:\n\" +\n            \t\"Go North\n\" +\n            \t\"Go South\n\" +\n            \t\"Go East\n\" +\n          " +
+                    	"\t\"Go West\"");
                     break;
-                    #endregion
-            }
-            if (option.ToLower()=="go north") 
-            {
-                if (weaponOfChoice == WeaponsEnum.SHORTSWORD) 
-                {
-                    Console.WriteLine("You come across a thicket it looks peaceful, but somewhat hard to walk through. What would you like to do?");
-                    string actionChoice = Console.ReadLine();
-                    switch (actionChoice)
-                    {
-                        case "Cut down thicket":
-                        case "cut down thicket":
-                            Console.WriteLine("You took a swing at the thicket, and successfully cutting some of the thicket. \n" +
-                                "Do you continue cutting the thicket?");
-                            actionChoice = Console.ReadLine().ToLower();
-                            int actionCount = 0;
-                            while (actionChoice.ToLower()=="yes" || actionChoice.ToLower() == "y"&&actionCount<=5) 
-                            {
-                                Console.Write("You continue to cut the thicket, you hear a roar that gets louder as you continue to cut.\n" +
-                                    "Would you like to continue cutting the thicket?");
-                                actionChoice = Console.ReadLine().ToLower();
-                               
-                             }
-
-                            break;
-
-                            
-                    }
-
-                }
             }
         }
-        
     }
 }

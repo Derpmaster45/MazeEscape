@@ -1,4 +1,5 @@
 ﻿using System;
+using MazeEscape.Enums;
 namespace MazeEscape
 {
     public class WeaponSTATS
@@ -27,6 +28,7 @@ namespace MazeEscape
 
             return damage;
         }
+     
     }
 
 }

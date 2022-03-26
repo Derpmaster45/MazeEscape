@@ -10,21 +10,25 @@ namespace MazeEscape
         public static void Main(string[] args)
         {
             // object instance creation
-            WeaponsEnum weaponOfChoice = new WeaponsEnum();
+            WeaponsEnum weaponOfChoice= new WeaponsEnum();
             WeaponSTATS stats = new WeaponSTATS();
-
-            //PlayerStats pStats =();
+            
+            PlayerStats pStats =();
 
             // stats setup
-            // pStats.setHealth = 100;
+            pStats.health = 100;
+            pStats.defense = 10;
+            pStats.speed = 3;
+            pStats.level = 1;
             double weaponDamage;
 
             // intro and first choice
+            #region 
             Console.WriteLine("You wake up, and you don't know where you are. There are 4 pathways. You can:\n" +
-                "Go North\n" +
-                "Go South\n" +
-                "Go East\n" +
-                "Go West");
+            "Go North\n" +
+            	"Go South\n" +
+            	"Go East\n" +
+            	"Go West");
             Console.WriteLine("What will you choose?");
             string option = Console.ReadLine();
             // use a switch statement to bulkify the statements
@@ -45,7 +49,7 @@ namespace MazeEscape
 
                             weaponOfChoice = WeaponsEnum.SHORTSWORD;
                             Console.WriteLine($"You picked up the {weaponOfChoice}.\n You have no idea why it is here, but in just in case, you take it with you.");
-                            weaponDamage = stats.setDamage(weaponOfChoice);
+                            weaponDamage=stats.setDamage(weaponOfChoice);
                             //Console.WriteLine($"The damage for {weaponOfChoice} is {weaponDamage}");
                             break;
                         case "NO":
@@ -55,10 +59,6 @@ namespace MazeEscape
                         case "Leave short sword alone":
                         case "LEAVE SHORT SWORD ALONE":
                         case "leave short sword alone":
-                            Console.WriteLine("You leave the short sword alone thinking that you may not need it.");
-                            weaponOfChoice = WeaponsEnum.FISTS;
-
-                            break;
 
                         default:
                             Console.WriteLine("Command not recognized");
@@ -66,7 +66,7 @@ namespace MazeEscape
 
                     }
                     break;
-                // case for heading south
+                    // case for heading south
                 case "Go south":
                 case "Go South:":
                 case "go south":
@@ -75,34 +75,43 @@ namespace MazeEscape
                 default:
                     Console.WriteLine("Command not recognised");
                     break;
-
+                    #endregion
             }
-            if (option.ToLower() == "go north")
+            if (option.ToLower()=="go north") 
             {
-                if (weaponOfChoice == WeaponsEnum.SHORTSWORD)
+                if (weaponOfChoice == WeaponsEnum.SHORTSWORD) 
                 {
-                    Console.WriteLine("You come across a thicket it looks peaceful. What would you like to do?");
-                    string actionChoice = Console.ReadLine().ToLower();
-                    switch (actionChoice) 
+                    Console.WriteLine("You come across a thicket it looks peaceful, but somewhat hard to walk through. What would you like to do?");
+                    string actionChoice = Console.ReadLine();
+                    switch (actionChoice)
                     {
-                        case "cut it down":
-                            int i = 0;
-                            do { Console.WriteLine($"You took a swing at the the Thicket with the {weaponOfChoice.ToString().ToLower()}");
+                        case "Cut down thicket":
+                        case "cut down thicket":
+                            Console.WriteLine("You took a swing at the thicket, and successfully cutting some of the thicket. \n" +
+                                "Do you continue cutting the thicket?");
+                            actionChoice = Console.ReadLine().ToLower();
+                            int actionCount = 0;
+                            while (actionChoice.ToLower()=="yes" || actionChoice.ToLower() == "y"&&actionCount<=5) 
+                            {
+                                Console.Write("You continue to cut the thicket, you hear a roar that gets louder as you continue to cut.\n" +
+                                    "Would you like to continue cutting the thicket?");
+                                actionChoice = Console.ReadLine().ToLower();
+                                if (actionChoice.ToLower() == "no")
+                                break;
+                                actionCount++;
+                             }
 
-                                Console.WriteLine("Would you like to continue Y/n");
-                                string gameContinue= Console.ReadLine().ToLower();
-                                if (gameContinue.ToLower() == "yes")
-                                { 
-                                
-                                }
-                            }
-                            while (i < 5);
+                            break;
+                        case "Walk through thicket":
+                            Console.WriteLine("As you walk thorugh the thicket, you struggle to not get caught up in the vines. You make it through to a beautiful lake\n You need to find a way to cross the lake");
                             break;
 
+                            
                     }
 
                 }
             }
         }
+        
     }
 }
