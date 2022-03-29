@@ -44,7 +44,7 @@ namespace MazeEscape.ExperimentalClasses
                                 weaponDamage = damageDealt.damage;
                                 break;
                          }
-                        Console.WriteLine($"You attacked and did {weaponDamage.ToString()}");
+                        //Console.WriteLine($"You attacked and did {weaponDamage.ToString()}");
 
                         break;
                     case 2:

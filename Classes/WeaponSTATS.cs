@@ -27,7 +27,8 @@ namespace MazeEscape
             }
 
             return damage;
-        }
+
+    }
      
     }
 

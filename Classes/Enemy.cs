@@ -10,7 +10,7 @@ namespace MazeEscape.Classes
         public double health { get; set; }
 
         // setters
-        public string setName(EnemyTypes type) 
+        public void setName(EnemyTypes type) 
         {
             // switch statements go before return
             switch (type)
@@ -28,9 +28,13 @@ namespace MazeEscape.Classes
                     name = "Zombie";
                     break;
             }
+
+        }
+        public string getName(EnemyTypes types)
+        {
             return name;
         }
-        public double setAttackPoints(EnemyTypes type)
+        public void setAttackPoints(EnemyTypes type)
         {
             //switch statements go before return, add more as they are added
             switch (type)
@@ -49,9 +53,14 @@ namespace MazeEscape.Classes
                     break;
 
             }
+
+        }
+        public double getAttackPoints(EnemyTypes types)
+        {
             return attackPoints;
         }
-        public double setDefensePoints(EnemyTypes type)
+
+        public void setDefensePoints(EnemyTypes type)
         {
             // switch statement goes here
             switch (type)
@@ -70,9 +79,14 @@ namespace MazeEscape.Classes
                     break;
             }
 
-            return defensePoints;
+           
         }
-        public double setHealth(EnemyTypes type)
+        public double getDefensePoints(EnemyTypes type) 
+        {
+            return defensePoints;
+        
+        }
+        public void setHealth(EnemyTypes type)
         {
             // switch statement goes here
             switch (type)
@@ -81,15 +95,19 @@ namespace MazeEscape.Classes
                     health = 150;
                     break;
                 case EnemyTypes.CAVECRAWLER:
-                    health = 250;
+                    health = 170;
                     break;
                 case EnemyTypes.HORNET:
-                   health= 200;
+                   health= 110;
                     break;
                 case EnemyTypes.ZOMBIE:
                     health = 100;
                     break;
             }
+
+        }
+        public double getHealth(EnemyTypes type) 
+        {
             return health;
         }
     }
