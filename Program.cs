@@ -49,6 +49,7 @@ namespace MazeEscape
                         case "y":
                         case "Y":
                         case "Pick up short sword":
+                        case "Yes":
 
                             weaponOfChoice = WeaponsEnum.SHORTSWORD;
                             Console.WriteLine($"You picked up the {weaponOfChoice}.\n You have no idea why it is here, but in just in case, you take it with you.");
@@ -93,6 +94,8 @@ namespace MazeEscape
                     switch (actionChoice) 
                     {
                         case "cut it down":
+                        case "Cut it down":
+                        case "CUT IT DOWN":
                             int i = 0;
                             do { Console.WriteLine($"You took a swing at the the thicket with the {weaponOfChoice.ToString().ToLower()}");
 
@@ -112,7 +115,7 @@ namespace MazeEscape
 
                             }
 
-                            while (i < 5 );
+                            while (i <=5 );
                             if (i == 5)
 
                             {
@@ -125,19 +128,31 @@ namespace MazeEscape
                                     switch (actionChoice)
                                     {
                                         case "attack":
-                                            dealDamage()
+                                        case "Attack":
+                                        case "ATTACK":
+                                           // dealDamage()
                                             break;
                                         case "retreat":
+                                            Console.WriteLine("You have retreated!");
                                             break;
                                         default:
                                             Console.WriteLine("Command not recognized.");
                                             break;
                                     }
-
+                                    if(actionChoice.ToLower()=="Retreat") 
+                                    {
+                                        break;
+                                    }
                                 }
                             }
+                            else
+                            {
+                                Console.WriteLine("You walk through the thicket and you " +
+                                    "don't disturb the wildlife living within the thicket.");
+                            }
                             break;
-
+                        default:
+                            break;
                     }
 
                 }
