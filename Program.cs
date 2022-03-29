@@ -7,13 +7,18 @@ namespace MazeEscape
 {
     class MainClass
     {
+        public double dealDamage(double pAttack, double eHealth, double eDefence)
+        {
+            double damageDealt = pAttack - (eHealth * eDefence);
+            return damageDealt;
+        }
         public static void Main(string[] args)
         {
             // object instance creation
             WeaponsEnum weaponOfChoice = new WeaponsEnum();
             WeaponSTATS stats = new WeaponSTATS();
             EnemyTypes type = new EnemyTypes();
-
+            Enemy eStats = new Enemy();
 
             //PlayerStats pStats =();
 
@@ -89,27 +94,47 @@ namespace MazeEscape
                     {
                         case "cut it down":
                             int i = 0;
-                            do { Console.WriteLine($"You took a swing at the the Thicket with the {weaponOfChoice.ToString().ToLower()}");
+                            do { Console.WriteLine($"You took a swing at the the thicket with the {weaponOfChoice.ToString().ToLower()}");
 
                                 Console.WriteLine("Would you like to continue Y/n");
                                 string gameContinue= Console.ReadLine().ToLower();
-                                if (gameContinue.ToLower() == "yes")
+                                if (gameContinue.ToLower() == "yes"|| gameContinue.ToLower()=="y")
                                 {
                                     i++;
                                 }
                                 else
                                 {
-                                    Console.WriteLine("You stopped cutting the Thicket");
+                                    Console.WriteLine("You stopped cutting the thicket and work your way through the remaining thicket." +
+                                    	"When you get out of the thicket, you come across a stream teaming with wildlife. This is the end of the demo.");
+
                                     break;
                                 }
+
                             }
+
                             while (i < 5 );
-                            if (i == 5) 
+                            if (i == 5)
 
                             {
-                                type = EnemyTypes.BAT;
-                                Console.WriteLine($"You have encountered a {type}");
+                                while (eStats.getHealth(type) > 0)
+                                {
+                                    type = EnemyTypes.BAT;
+                                    Console.WriteLine($"You have encountered a {type}");
+                                    Console.WriteLine("What would you like to do?");
+                                    actionChoice = Console.ReadLine().ToLower();
+                                    switch (actionChoice)
+                                    {
+                                        case "attack":
+                                            dealDamage()
+                                            break;
+                                        case "retreat":
+                                            break;
+                                        default:
+                                            Console.WriteLine("Command not recognized.");
+                                            break;
+                                    }
 
+                                }
                             }
                             break;
 
@@ -119,4 +144,5 @@ namespace MazeEscape
             }
         }
     }
+
 }
