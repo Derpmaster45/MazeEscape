@@ -20,11 +20,11 @@ namespace MazeEscape.ExperimentalClasses
                 // introduce the battle
                 Console.WriteLine($"You encounter a {type.ToString().ToLower()}, what would you like to do?");
                 // show the menu!
-                Console.WriteLine("Menu:\n 1: Physical Attack\n 2: Magic Attack\n 3: Defend\n 4: Retreat");
+                Console.WriteLine("Menu:\n 1: Physical Attack\n 2: Retreat\n");
                 // set action to 0 to keep from defaulting to an action.
                 int action = 0;
                 //double weaponDamage;
-                int.TryParse(Console.ReadLine(), out action);
+                int.TryParse(Console.ReadKey().ToString(), out action);
                 switch (action)
                 {
                     case 1:
@@ -48,7 +48,7 @@ namespace MazeEscape.ExperimentalClasses
 
                         break;
                     case 2:
-                        // insert action code here
+                        // insert  action code here
                         break;
 
                 }
