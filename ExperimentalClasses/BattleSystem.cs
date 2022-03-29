@@ -9,10 +9,12 @@ namespace MazeEscape.ExperimentalClasses
         public Enemy target = new Enemy();
         PlayerStats player = new PlayerStats();
         private WeaponsEnum weapons { get; set; }
+        public WeaponSTATS damageDealt;
 
         // battlesystem fuction
         public void battleStart(EnemyTypes type)
         {
+            double weaponDamage;
             while (target.health > 0)
             {
                 // introduce the battle
@@ -21,18 +23,31 @@ namespace MazeEscape.ExperimentalClasses
                 Console.WriteLine("Menu:\n 1: Physical Attack\n 2: Magic Attack\n 3: Defend\n 4: Retreat");
                 // set action to 0 to keep from defaulting to an action.
                 int action = 0;
+                //double weaponDamage;
                 int.TryParse(Console.ReadLine(), out action);
                 switch (action)
                 {
                     case 1:
+                        switch (weapons) 
+                        {
+                            case WeaponsEnum.BOW:
+                                //damageDealt = 35.0;
+                               weaponDamage= damageDealt.damage;
+                                break;
+                            case WeaponsEnum.SHORTSWORD:
+                                weaponDamage = damageDealt.damage;
+                                break;
+                            case WeaponsEnum.FISTS:
+                                weaponDamage = damageDealt.damage;
+                                break;
+                            case WeaponsEnum.SPEAR:
+                                weaponDamage = damageDealt.damage;
+                                break;
+                         }
+                        Console.WriteLine($"You attacked and did {weaponDamage.ToString()}");
+
                         break;
                     case 2:
-                        // insert action code here
-                        break;
-                    case 3:
-                        // insert action code here
-                        break;
-                    case 4:
                         // insert action code here
                         break;
 
